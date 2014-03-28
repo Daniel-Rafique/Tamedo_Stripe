@@ -38,7 +38,7 @@
             	<title>Stripe</title>
             	<cctypes>AE,VI,MC,DI,JCB</cctypes>
             	<useccv>1</useccv>
-                <min_order_total>0.50</min_order_total>
+                <min_order_total>10</min_order_total>
             </tamedo_stripe>
         </payment>
     </default>
