@@ -15,7 +15,7 @@
         <payment>
             <groups>
                 <tamedo_stripe translate="label" module="tamedo_stripe">
-                    <label>Stripe</label>
+                    <label>Tamedo Stripe</label>
                     <comment>
                         <![CDATA[<a href="https://stripe.com/" target="_blank">Create a Stripe account</a>]]></comment>
                     <frontend_type>text</frontend_type>
