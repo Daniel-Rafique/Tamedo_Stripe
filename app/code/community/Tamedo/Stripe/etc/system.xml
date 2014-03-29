@@ -7,11 +7,10 @@
  * @package		Tamedo_Stripe
  * @author		Daniel Rafique <rafique@tamedo.com>
  * @copyright	Tamedo (http://tamedo.com)
- * @license		http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 -->
 <config>
-   <sections>
+    <sections>
         <payment>
             <groups>
                 <tamedo_stripe translate="label" module="tamedo_stripe">
@@ -40,7 +39,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
-                        </title>                 
+                        </title>
                         <api_key translate="label">
                             <label>Api Key</label>
                             <frontend_type>obscure</frontend_type>
@@ -58,7 +57,25 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
-                        </cctypes>       
+                        </cctypes>
+                        <min_order_total translate="label">
+                            <label>Minimum Order Total</label>
+                            <comment>£0.10 is the minimum amount allowed by Stripe</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </min_order_total>
+                        <max_order_total translate="label">
+                            <label>Maximum Order Total</label>
+                            <comment>If customer tries to checkout with basket value greater than the maximum allowed they will be prevented from completing the order.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>95</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </max_order_total>
                         <useccv translate="label">
                             <label>Credit Card Verification</label>
                             <frontend_type>select</frontend_type>
@@ -85,26 +102,11 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>0</show_in_store>
-                            <depends><allowspecific>1</allowspecific></depends>
+                            <depends>
+                                <allowspecific>1</allowspecific>
+                            </depends>
                         </specificcountry>
-                        <min_order_total translate="label">
-                            <label>Minimum Order Total</label>
-                            <comment>£0.10 is the minimum amount allowed by Stripe</comment>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>90</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
-                        </min_order_total>
-                        <max_order_total translate="label">
-                            <label>Maximum Order Total</label>
-                            <comment>If customer tries to checkout with basket value greater than the maximum allowed they will be prevented from completing the order.</comment>
-                            <frontend_type>text</frontend_type>
-                            <sort_order>95</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>0</show_in_store>
-                        </max_order_total>
+
                         <model>
                         </model>
                     </fields>
